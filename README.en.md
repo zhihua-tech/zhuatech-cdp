@@ -1,5 +1,11 @@
 [简体中文](README.md) | **English**
 
+## 2026-10-23 update: Consent-event point-in-time snapshot
+
+Replays explicit purpose/channel consent events into point-in-time customer snapshots, preserving revocation and expiry and never treating a missing record as permission.
+
+After signing in to the real backend, open the bottom-right business calculation tool to submit structured input, inspect calculated results and export complete JSON. The endpoint is `POST /api/workbench/consent-event-snapshot` with the existing JWT. Computation is implemented server-side; it does not query another user's records, persist business documents, approve transactions or invoke external models. See [algorithm, sample and test notes](docs/AI_WORKFLOW_UPGRADE_20261023.md).
+
 # ZhuaTech Customer Data Platform
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for customer, sales, marketing, channel, and service operations.
