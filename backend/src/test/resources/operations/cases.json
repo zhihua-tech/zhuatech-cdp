@@ -1,0 +1,60 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "authorizationGap": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "withdrawn": "1"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "purposeApproved": "NO"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "consentUntil": "2026-10-23"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "retentionUntil": "2026-10-24"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "purposeConsents": "101"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "withdrawn": "101"
+    },
+    "expected": {},
+    "error": true
+  }
+]
